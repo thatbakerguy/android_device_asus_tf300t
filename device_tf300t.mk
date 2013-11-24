@@ -25,7 +25,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/init.cardhu.cpu.rc:root/init.cardhu.cpu.rc \
     $(LOCAL_PATH)/ramdisk/fstab.cardhu:root/fstab.cardhu
 
-
+# Prebuilt config files
 
 # Input device config files
 PRODUCT_COPY_FILES += \
@@ -52,8 +52,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
     $(LOCAL_PATH)/asusdec/com.cyanogenmod.asusdec.xml:system/etc/permissions/com.cyanogenmod.asusdec.xml
-$(LOCAL_PATH)/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \	
-$(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
 # Build characteristics setting 
 PRODUCT_CHARACTERISTICS := tablet
@@ -72,9 +70,10 @@ PRODUCT_PACKAGES += \
     libaudioutils \
     blobpack_tfp \
     mischelp \
-    wifimacwriter \
-    #com.cyanogenmod.asusdec \
-    libasusdec_jni
+    wifimacwriter 
+
+#    libasusdec_jni
+#    com.cyanogenmod.asusdec 
 
 # Propertys spacific for this device
 PRODUCT_PROPERTY_OVERRIDES := \
